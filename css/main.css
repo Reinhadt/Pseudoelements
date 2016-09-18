@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Pacifico', cursive;
+}
+
+h1{	
+	color: white;
+	text-align: center;
+	font-size: 64px;
+	margin: 0;
+	padding: 0;
+	background: #3498db;
+	position: relative;
+}
+h1:before{
+	content: "";
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0px; 
+}
+
+
+.acheUno:before{
+	background: linear-gradient(48deg, transparent 33.333%, #E2E2E2 33.333%, #E2E2E2 66.667%, transparent 66.667%),   linear-gradient(-45deg, transparent 33.333%, #E2E2E2 33.333%, #FFF 67.667%, transparent 67.667%);
+	background-size: 20px 150px;
+}
+
+.cuadritos{
+	margin-top: 0px;
+	position: relative;
+}
+/*HOJA DE PAPEL*/
+.cuadrito{
+	width: 350px;
+	height: 350px;
+	background-color: #336699;
+	top: 25px;
+	left: 50%;
+	margin-left: -175px;
+	position: absolute;
+}
+.cuadrito p{
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	font-size: 48px;
+	color: white;
+}
+.cuadrito:before{
+	content: "";
+	position:  absolute;
+	bottom: 0;
+	left: 0;
+	background: -webkit-linear-gradient(45deg, white 45%, #AAA 47%, #CCC 10%, white);
+	width: 0px;
+	height: 0px;	
+	-webkit-transition: all ease-out 0.1s;
+}
+.cuadrito:hover:before{
+	width: 40px;
+	height: 40px;
+}
+
+/*MUESCA LATERAL*/
+.cuadron{
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	top: 400px;
+	left: 50%;
+	margin-left: -175px;
+	background-color: #E67E22;
+}
+.cuadron:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -75px;
+	/*Esto hace el triángulo : */
+	border-color: transparent #E67E22 transparent transparent;
+	border-style: solid;
+	border-width: 75px 75px 75px 0px;
+}
+.cuadron p{
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	font-size: 48px;
+	color: white;
+}
+
+/*CUADRO LEVITADOR CON KEYFRAMES*/
+.cuadrero{
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	top: 775px;
+	left: 50%;
+	margin-left: -175px;
+	background-color: #E74C3C;
+	margin-bottom: 200px;
+}
+/*Código de la sombra*/
+.cuadrero:before{
+	position: absolute;
+	content: "";
+	top: 102%;
+	left: 5%;
+	height: 15px;
+	width: 80%;
+	margin: 0 auto;
+	opacity: 0;
+	background: -webkit-radial-gradient(center, ellipse, rgba(0,0,0,0.35) 0%,
+				rgba(0,0,0,0) 80%);
+	-webkit-transition-duration: 0.3s;
+}
+/*.cuadrero:hover{
+	-webkit-transform:translateY(-12px);
+	-webkit-animation:1.5s moverCaja infinite;
+}
+.cuadrero:hover:before{
+	opacity: 0.4;
+	-webkit-transfrom: translateY(6px);
+	-webkit-animation: 1.5s moverSombra infinite;
+}*/
+
+.moveBitch{
+	-webkit-transform:translateY(-12px);
+	-webkit-animation:1.5s moverCaja infinite;
+}
+.moveBitch:before{
+	opacity: 0.4;
+	-webkit-transfrom: translateY(6px);
+	-webkit-animation: 1.5s moverSombra infinite;
+}
+
+.cuadrero p{
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	font-size: 48px;
+	color: white;
+}
+
+.cuadrero:after{
+	
+	/*background: linear-gradient(45deg, white 66.667%, transparent 33.333%), linear-gradient(-45deg, white 33.333%, red 33.333%);*/
+	
+}
+
+.heroe:after{
+	background-size: 40px 150px;
+	/*background : linear-gradient(
+      45deg, transparent 33.333%,
+      #E74C3C 33.333%, #E74C3C 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      #FFF 33.333%, #FFF 66.667%,
+      transparent 66.667%
+    );*/
+}
+
+.despues{
+	position: relative;
+}
+
+.despues:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+}
+.cuadrini{
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	top: 650px;
+	left: 50%;
+	margin-left: -175px;
+	background-color: #8E44AD;
+	margin-bottom: 200px;
+}
+
+.cuadrini p{
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	font-size: 48px;
+	color: white;
+}
+
+.cuadrini:before{
+	background: linear-gradient(48deg, transparent 33.333%, #E2E2E2 33.333%, #E2E2E2 66.667%, transparent 66.667%),   linear-gradient(-45deg, transparent 33.333%, #E2E2E2 33.333%, white 67.667%, transparent 67.667%);
+	background-size: 10px 10px;
+}
+
+.picos{
+	position: relative;
+}
+
+.picos:before{
+	content: "";
+	width: 100%;
+	height: 140px;
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	display: block;
+}
+
+/*Keyframes para mover la caja y mover la sombra*/
+
+@-webkit-keyframes moverCaja{
+	50%{
+		-webkit-transform: translateY(-6px);
+	}
+}
+
+@-webkit-keyframes moverSombra{
+	50%{
+		-webkit-transform: translateY(3px);
+		opacity: 1;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
